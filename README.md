@@ -1,11 +1,19 @@
-ESP32 Exception Stack Backtrace Analyzer
+ESP32 Exception Stack Backtrace Analyzer - Windows Powershell fork
 ========================================
 
-This little bash script parses the exception backtrace printed by the ESP32 firmware
+This is a port to Windows Powershell of the handy bash script created originally by [dankeboy36](https://github.com/dankeboy36)
+-------
+
+I use this by creating a `backtrace.txt` file and using that as the second argument. I didn't know how to reliably paste in a multiline dump otherwise.
+
+(mostly) Original README
+------
+
+This little powershell script parses the exception backtrace printed by the ESP32 firmware
 and uses GDB to print out the source location of all code addresses.
 
 It is heavily inspired by https://github.com/me-no-dev/EspExceptionDecoder but only uses
-bash and xtensa-esp32-elf GDB.
+powershell and xtensa-esp32-elf GDB.
 
 __Install:__ Place the esp32-backtrace script somewhere in your path or use the full pathname to run
 it. If you are not using platformio to build your project you need to edit the `XTENSA_GDB`
